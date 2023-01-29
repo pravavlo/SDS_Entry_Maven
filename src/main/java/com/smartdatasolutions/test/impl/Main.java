@@ -60,8 +60,8 @@ public class Main extends MemberFileConverter {
 			File file = new File(state + "_outputFile.csv");
 			try (Writer writer = new FileWriter(file)) {
 				for (Member member : membersInState) {
-//					main.getMemberExporter().writeMember(member,writer);
-					writer.write(member.toCSVString() + "\n");
+				main.getMemberExporter().writeMember(member,writer); //comment this code and uncomment the below code for better CSV view
+			//	writer.write(member.toCSVString() + "\n");
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
