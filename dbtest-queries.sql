@@ -6,7 +6,3 @@ d.status= 'TO_REPRICE' and (b.customer_id= 2 or b.customer_id= 1) order by b.cus
 
 select sum(d.claimed_charge) as total
 from document d;
-
-SELECT SUM(document.claimed_charge) as total_claimed_charge
-FROM document
-JOIN batch ON document.batch_id = batch.id;
